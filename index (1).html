@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<title>HTML Tutorial</title>
+<body>
+
+<h1>Linux :)</h1>
+<h3>Резервное копирование</h3>
+<p><a title="резервное копирование" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fstorage14.eljur.ru%2Fstorage%2Ff08e31809aa0ffefeb2f3b6dd3441acc%3Ffilename%3D19%2B%25D0%25A0%25D0%25B5%25D0%25B7%25D0%25B5%25D1%2580%25D0%25B2_%25D0%25BA%25D0%25BE%25D0%25BF%25D0%25B8_Ubuntu.docx%26domain%3Dkmpo&amp;wdOrigin=BROWSELINK">ссылка на резервное копирование</a></p>
+<h3>Настройка SSH</h3>
+<p>Заходим в меню &gt; устройства &gt; сеть &gt; проброс портов. <br />Имя - <span style="background-color: #ccffcc;">SSH</span>, Порт хоста - <span style="background-color: #ccffcc;">2222</span>, Порт гостя - <span style="background-color: #ccffcc;">22</span>. <br />В терминале вводим команду для установки SSH: <strong><span style="background-color: #ccffcc;">sudo apt install openssh-server</span></strong>. <br />Включаем службу SSH: <strong><span style="background-color: #ccffcc;">sudo systemctl enable --now ssh</span></strong>. <br />Проверяем, что она включилась: <strong><span style="background-color: #ccffcc;">sudo systemctl status ssh</span></strong>. <br />Если зелёненьким показывается Active - все супер.</p>
+<h3>Настройка виртуального принтера</h3>
+<p>Заходим в настройки &gt; принтеры &gt; добавить принтер. Там появится принтер и надо его добавить. Если этого не произошло, то в терминал пишем: <span style="background-color: #ccffcc;"><strong>sudo apt install cups-pdf</strong></span> либо <strong><span style="background-color: #ccffcc;">sudo apt install</span><span style="background-color: #ccffcc;"> cups</span></strong>. И снова пробуем добавить принтер</p>
+<h3>Добавление пользователя в группу</h3>
+<p>Создание пользователя: <strong><span style="background-color: #ccffcc;">sudo useradd -m user1</span></strong>. Задать пароль юзеру: <strong><span style="background-color: #ccffcc;">sudo passwd user1<br /></span></strong> Проверить всех пользователей: <strong><span style="background-color: #ccffcc;">ls -l /home</span></strong>. Проверить группы пользователя: <strong><span style="background-color: #ccffcc;">groups user1</span></strong>.<br /> Добавить группу: <strong><span style="background-color: #ccffcc;">sudo groupadd developers</span></strong>. Добавить пользователя в группу:&nbsp;<span style="background-color: #ccffcc;"><strong>sudo useradd -aG admins user1</strong></span>.<br /> Наделить пользователя правами админа: <strong><span style="background-color: #ccffcc;">sudo usermos -aG sudo user1</span></strong>. Посмотреть все группы: <strong><span style="background-color: #ccffcc;">cat /etc/group</span></strong>. <br />ПОСМОТРЕТЬ КАК ДОБАВЛЯТЬ ДОСТУП К ДИРЕКТОРИЯМ(!) По идее, создав пароль - мы выполнили настройку аутентификации и авторизации +1.00. Создали группы +1.00 И как бы наделили правами некоторых пользователей. Кто-то админ, а кто-то нет.</p>
+<h3>Руководство пользователя</h3>
+<p><a href="https://files.stroyinf.ru/Index/77/77873.htm">ссылка на гост</a></p>
+<h3>Ссылка от какой-то девочки на некоторые шаги</h3>
+<p><a href="https://github.com/tretiakovalera/PM04/wiki">ссылка на гост</a></p>
+</body>
+</html>
