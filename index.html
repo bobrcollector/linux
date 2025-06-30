@@ -2,23 +2,53 @@
 <html>
 <title>Linux</title>
 <body>
-
+<p>&nbsp;</p>
 <h1>Linux :)</h1>
+<p>https://disk.yandex.ru/d/MEVJzV5MHnbpVw - разбор от колядина</p>
 <h3>Резервное копирование</h3>
 <p><a title="резервное копирование" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fstorage14.eljur.ru%2Fstorage%2Ff08e31809aa0ffefeb2f3b6dd3441acc%3Ffilename%3D19%2B%25D0%25A0%25D0%25B5%25D0%25B7%25D0%25B5%25D1%2580%25D0%25B2_%25D0%25BA%25D0%25BE%25D0%25BF%25D0%25B8_Ubuntu.docx%26domain%3Dkmpo&amp;wdOrigin=BROWSELINK">ссылка на резервное копирование</a></p>
 <p>если это не работает, то: sudo apt install deja-dup. Затем в меню найти эту программу, потыкать и сделать резервное копирование.</p>
 <h3>Настройка SSH</h3>
-<p><a title="Настройка SSH" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fstorage14.eljur.ru%2Fstorage%2Fd23e870a414f27ef2309a6055567df4a%3Ffilename%3D20%2BSSH%2BLinux.docx%26domain%3Dkmpo&wdOrigin=BROWSELINK">ссылка на настройку SSH</a></p>
-  gsettings set org.gnome.desktop.interface enable-animations false  - отключить композицию рабочего стола
+<p><a title="Настройка SSH" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fstorage14.eljur.ru%2Fstorage%2Fd23e870a414f27ef2309a6055567df4a%3Ffilename%3D20%2BSSH%2BLinux.docx%26domain%3Dkmpo&amp;wdOrigin=BROWSELINK">ссылка на настройку SSH</a></p>
+<p>лучше делать по файлу выше!!</p>
 <p>Заходим в меню &gt; устройства &gt; сеть &gt; проброс портов. <br />Имя - <span style="background-color: #ccffcc;">SSH</span>, Порт хоста - <span style="background-color: #ccffcc;">2222</span>, Порт гостя - <span style="background-color: #ccffcc;">22</span>. <br />В терминале вводим команду для установки SSH: <strong><span style="background-color: #ccffcc;">sudo apt install openssh-server</span></strong>. <br />Включаем службу SSH: <strong><span style="background-color: #ccffcc;">sudo systemctl enable --now ssh</span></strong>. <br />Проверяем, что она включилась: <strong><span style="background-color: #ccffcc;">sudo systemctl status ssh</span></strong>. <br />Если зелёненьким показывается Active - все супер.</p>
+<h3>Что-то еще</h3>
+<p>gsettings set org.gnome.desktop.interface enable-animations false - отключить композицию рабочего стола</p>
+<p>&nbsp;</p>
+<p>ifconfig -a&nbsp; &nbsp;-&nbsp; проверка сетевого соединения</p>
 <h3>Настройка виртуального принтера</h3>
 <p>Заходим в настройки &gt; принтеры &gt; добавить принтер. Там появится принтер и надо его добавить. Если этого не произошло, то в терминал пишем: <span style="background-color: #ccffcc;"><strong>sudo apt install cups-pdf</strong></span> либо <strong><span style="background-color: #ccffcc;">sudo apt install</span><span style="background-color: #ccffcc;"> cups</span></strong>. И снова пробуем добавить принтер</p>
 <h3>Добавление пользователя в группу</h3>
 <p>через графический интерфейс: sudo apt install gnome-system-tools. Иначе:</p>
-<p>Создание пользователя: <strong><span style="background-color: #ccffcc;">sudo useradd -m user1</span></strong>. Задать пароль юзеру: <strong><span style="background-color: #ccffcc;">sudo passwd user1<br /></span></strong> Проверить всех пользователей: <strong><span style="background-color: #ccffcc;">ls -l /home</span></strong>. Проверить группы пользователя: <strong><span style="background-color: #ccffcc;">groups user1</span></strong>.<br /> Добавить группу: <strong><span style="background-color: #ccffcc;">sudo groupadd developers</span></strong>. Добавить пользователя в группу:&nbsp;<span style="background-color: #ccffcc;"><strong>sudo useradd -aG admins user1</strong></span>.<br /> Наделить пользователя правами админа: <strong><span style="background-color: #ccffcc;">sudo usermos -aG sudo user1</span></strong>. Посмотреть все группы: <strong><span style="background-color: #ccffcc;">cat /etc/group</span></strong>. <br />ПОСМОТРЕТЬ КАК ДОБАВЛЯТЬ ДОСТУП К ДИРЕКТОРИЯМ(!) По идее, создав пароль - мы выполнили настройку аутентификации и авторизации +1.00. Создали группы +1.00 И как бы наделили правами некоторых пользователей. Кто-то админ, а кто-то нет.</p>
+<p>Создание пользователя: <strong><span style="background-color: #ccffcc;">sudo useradd -m user1</span></strong>. Задать пароль юзеру: <strong><span style="background-color: #ccffcc;">sudo passwd user1<br /></span></strong> Проверить всех пользователей: <strong><span style="background-color: #ccffcc;">ls -l /home</span></strong>. Проверить группы пользователя: <strong><span style="background-color: #ccffcc;">groups user1</span></strong>.<br /> Добавить группу: <strong><span style="background-color: #ccffcc;">sudo groupadd developers</span></strong>. Добавить пользователя в группу:&nbsp;<span style="background-color: #ccffcc;"><strong>sudo usermod -aG admins user1</strong></span>.<br /> Наделить пользователя правами админа: <strong><span style="background-color: #ccffcc;">sudo usermod -aG sudo user1</span></strong>. Посмотреть все группы: <strong><span style="background-color: #ccffcc;">cat /etc/group</span></strong>. <br />ПОСМОТРЕТЬ КАК ДОБАВЛЯТЬ ДОСТУП К ДИРЕКТОРИЯМ(!) По идее, создав пароль - мы выполнили настройку аутентификации и авторизации +1.00. Создали группы +1.00 И как бы наделили правами некоторых пользователей. Кто-то админ, а кто-то нет.</p>
+<p>&nbsp;</p>
+<h3>Журнал мониторинка</h3>
+<p>Просмотр всего журнала:</p>
+<p>journalctl</p>
+<p>(По умолчанию отображает все записи,<br />начиная с самых старых. Используй стрелки<br />вверх/вниз для навигации, q для выхода).</p>
+<p>Просмотр последних записей (аналог tail -f):</p>
+<p>journalctl -f&nbsp; &nbsp;- самая важная</p>
+<p>Фильтрация по времени:</p>
+<p>journalctl -- since "yesterday"</p>
+<p>journalctl -- until "today"</p>
+<p>journalctl -- since "2023-10-27 10:00:00"</p>
+<p><img src="blob:https://web.telegram.org/032fe1cc-9b09-4c23-8496-9dc1b7c0e46c" alt="" /><img src="blob:https://web.telegram.org/032fe1cc-9b09-4c23-8496-9dc1b7c0e46c" alt="" /></p>
+<h3>&nbsp;</h3>
+<h3>Другие шпоры</h3>
+<p><a href="https://github.com/tretiakovalera/PM04/wiki">https://github.com/tretiakovalera/PM04/wiki</a></p>
+<p><a href="https://kvalik315.tilda.ws/">Пм4</a></p>
+<p><a href="https://nightviolet.pythonanywhere.com/">Руководство по использованию программного обеспечения</a></p>
+<p><a href="https://kallerika.github.io/pm04/">pm04</a></p>
 <h3>Руководство пользователя</h3>
 <p><a href="https://files.stroyinf.ru/Index/77/77873.htm">ссылка на гост</a></p>
-<h3>Ссылка от какой-то девочки на некоторые шаги</h3>
-<p><a href="https://github.com/tretiakovalera/PM04/wiki">ссылка на гост</a></p>
+<p>6.4 Руководство пользователя</p>
+<p>6.4.1 Документ &laquo;Руководство пользователя&raquo; должен содержать разделы: - введение; - назначение и условия применения; - подготовка к работе; - описание операций; - аварийные ситуации; - рекомендации по освоению.</p>
+<p>6.4.2 В разделе &laquo;Введение&raquo; приводят: - область применения средства автоматизации; - краткое описание возможностей средства автоматизации; - уровень подготовки пользователя; - перечень эксплуатационной документации, с которой необходимо ознакомиться пользователю.</p>
+<p>6.4.3 В разделе &laquo;Назначение и условия применения&raquo; приводят: - виды деятельности, функции, для автоматизации которых предназначено данное средство автоматизации; - условия применения средства автоматизации в соответствии с назначением (например, характеристики и конфигурация технических средств, операционная среда и общесистемные программные средства, входная информация, требования к подготовке специалистов и т. п.).</p>
+<p>6.4.4 В разделе &laquo;Подготовка к работе&raquo; приводят: - состав и содержание носителя данных, содержащего загружаемые программы и данные; - порядок загрузки программ и данных; - порядок проверки работоспособности.</p>
+<p>6.4.5 В разделе &laquo;Описание операций&raquo; приводят: - описание всех выполняемых функций, задач (комплексов задач), процедур; - описание операций технологического процесса обработки данных, необходимых для выполнения функций, задач (комплексов задач), процедур.</p>
+<p>6.4.6 Для каждой операции приводят: - наименование; - условия, при соблюдении которых возможно выполнение операции; - подготовительные действия; - основные действия в требуемой последовательности; - заключительные действия; - ресурсы, расходуемые на операцию.</p>
+<p>6.4.7 В разделе &laquo;Аварийные ситуации&raquo; приводят: - действия в случае несоблюдения условий выполнения технологического процесса, в том числе при длительных отказах технических средств; - действия по восстановлению программ и/или данных при отказе носителей данных или обнаружении ошибок в данных; - действия в случаях обнаружения несанкционированного доступа к данным; - действия в других аварийных ситуациях.</p>
+<p>6.4.8 В разделе &laquo;Рекомендации по освоению&raquo; приводят рекомендации по освоению и эксплуатации средства автоматизации, включая описание контрольного примера, правила его запуска и выполнения.</p>
 </body>
 </html>
