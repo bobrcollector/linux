@@ -5,10 +5,75 @@
 <p>&nbsp;</p>
 <h1>Linux :)</h1>
 <p>https://disk.yandex.ru/d/MEVJzV5MHnbpVw - разбор от колядина</p>
+<p>&nbsp;</p>
+<h2>Даня стайл:</h2>
+<h3>&nbsp;</h3>
+<h3>Настройка SSH:</h3>
+<p>Установка:&nbsp;</p>
+<p><span style="background-color: #ccffcc;"><strong><span id="p31R_mc56" class="markedContent"><span dir="ltr"><span tabindex="0" data-fui-focus-visible="">sudo apt</span></span></span><span id="p31R_mc57" class="markedContent"><span dir="ltr"><span tabindex="0">-</span></span></span><span id="p31R_mc58" class="markedContent"><span dir="ltr"><span tabindex="0">get install openssh</span></span></span><span id="p31R_mc59" class="markedContent"><span dir="ltr"><span tabindex="0">-</span></span></span><span id="p31R_mc60" class="markedContent"><span dir="ltr"><span tabindex="0">server</span></span></span></strong></span></p>
+<p><span class="markedContent"><span dir="ltr"><span tabindex="0">Доп. инструменты: </span></span></span></p>
+<p><span class="markedContent"><span dir="ltr"><span tabindex="0"><span style="background-color: #ccffcc;"><strong><span id="p44R_mc5" class="markedContent">sudo apt</span><span id="p44R_mc6" class="markedContent"><span dir="ltr"><span tabindex="0">-</span></span></span><span id="p44R_mc7" class="markedContent"><span dir="ltr"><span tabindex="0">get install policycoreutils</span></span></span><span id="p44R_mc8" class="markedContent"></span><span id="p44R_mc9" class="markedContent"><br /><span dir="ltr"><span tabindex="0">sudo apt</span></span></span><span id="p44R_mc10" class="markedContent"><span dir="ltr"><span tabindex="0">-</span></span></span><span id="p44R_mc11" class="markedContent"><span dir="ltr"><span tabindex="0">get install net</span></span></span><span id="p44R_mc12" class="markedContent"><span dir="ltr"><span tabindex="0">-</span></span></span><span id="p44R_mc13" class="markedContent"><span dir="ltr"><span tabindex="0" data-fui-focus-visible="">tools</span></span></span></strong></span></span></span></span></p>
+<p><span class="markedContent"><span dir="ltr"><span tabindex="0"><span class="markedContent"><span dir="ltr"><span tabindex="0" data-fui-focus-visible="">Далее,</span></span></span><strong><span class="markedContent"><span dir="ltr"><span tabindex="0" data-fui-focus-visible="">&nbsp;<span style="background-color: #ccffcc;">заходим в меню &gt; устройства &gt; сеть &gt; проброс портов.</span><br /><span style="background-color: #ccffcc;">Имя -&nbsp;SSH, Порт хоста -&nbsp;2222, Порт гостя -&nbsp;22.</span></span></span></span></strong></span></span></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="react-pdf__Page css-177" data-page-number="2">
+<div class="react-pdf__Page__textContent textLayer" data-main-rotation="0">
+<h3 class="endOfContent"><strong>Удаленный доступ к ативной сессии через cmd</strong></h3>
+<p>Ввести в cmd (вместо student нужно твое имя пользователя):&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;"><span dir="ltr"><span tabindex="0">ssh student@127.0.0.1</span></span> <span dir="ltr"><span tabindex="0">-</span></span><span dir="ltr"><span tabindex="0" data-fui-focus-visible="">p 2222</span></span></span></strong></p>
+<p>&nbsp;</p>
+</div>
+</div>
+<h3>Проверка сетевого подключения:</h3>
+<p><strong><span style="background-color: #ccffcc;">ifconfig -a</span></strong></p>
+<p>&nbsp;</p>
+<h3>Установка виртуального принтера:</h3>
+<p>Если нет принтера для добавления:</p>
+<p><span style="background-color: #ccffcc;"><strong>sudo apt install cups-pdf</strong></span></p>
+<p>&nbsp;</p>
+<h3>Резервное копирование:</h3>
+<p><strong><span style="background-color: #ccffcc;"><span id="p3R_mc53" class="markedContent"><span dir="ltr"><span tabindex="0">tar</span></span> <span dir="ltr"><span tabindex="0">cvpzf backup.tgz</span></span></span><span id="p3R_mc54" class="markedContent"> <span dir="ltr"><span tabindex="0">&ndash;</span></span></span><span id="p3R_mc55" class="markedContent"><span dir="ltr"><span tabindex="0">exclude=/proc</span></span></span><span id="p3R_mc56" class="markedContent"> <span dir="ltr"><span tabindex="0">&ndash;</span></span></span><span id="p3R_mc57" class="markedContent"><span dir="ltr"><span tabindex="0">exclude=/lost+found</span></span></span><span id="p3R_mc58" class="markedContent"> <span dir="ltr"><span tabindex="0">&ndash;</span></span></span><span id="p3R_mc59" class="markedContent"><br /><span dir="ltr"><span tabindex="0">exclude=/backup.tgz</span></span></span><span id="p3R_mc60" class="markedContent"> <span dir="ltr"><span tabindex="0">&ndash;</span></span></span><span id="p3R_mc61" class="markedContent"><span dir="ltr"><span tabindex="0">exclude=/mnt</span></span></span><span id="p3R_mc62" class="markedContent"> <span dir="ltr"><span tabindex="0">&ndash;</span></span></span><span id="p3R_mc63" class="markedContent"><span dir="ltr"><span tabindex="0">exclude=/sys</span></span></span><span id="p3R_mc64" class="markedContent"> <span dir="ltr"><span tabindex="0">&ndash;</span></span></span><span id="p3R_mc65" class="markedContent"><span dir="ltr"><span tabindex="0">exclude=/web</span></span> <span dir="ltr"><span tabindex="0" data-fui-focus-visible="">/</span></span></span></span></strong></p>
+<p>&nbsp;</p>
+<h3>Установочный образ системы:</h3>
+<p><strong><span style="background-color: #ccffcc;">sudo dd if=/dev/sda of=~/system_image.img bs=4M status=progress</span></strong></p>
+<p>&nbsp;</p>
+<h3>Точки востановления:</h3>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Группы пользователей:</h3>
+<p>через графический интерфейс:</p>
+<p>sudo apt install gnome-system-tools</p>
+<p>Через консоль:</p>
+<p>Создание пользователя:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">sudo useradd -m user1</span></strong>&nbsp;</p>
+<p>Задать пароль юзеру:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">sudo passwd user1<br /></span></strong>Проверить всех пользователей:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">ls -l /home</span></strong></p>
+<p>Проверить группы пользователя:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">groups user1</span></strong><br />Добавить группу:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">sudo groupadd developers</span></strong></p>
+<p>Добавить пользователя в группу:&nbsp;</p>
+<p><span style="background-color: #ccffcc;"><strong>sudo usermod -aG admins user1</strong></span><br />Наделить пользователя правами админа:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">sudo usermod -aG sudo user1</span></strong></p>
+<p>Посмотреть все группы:&nbsp;</p>
+<p><strong><span style="background-color: #ccffcc;">cat /etc/group</span></strong></p>
+<p>&nbsp;</p>
+<h3>Журнал мониторинга:</h3>
+<p><strong><span style="background-color: #ccffcc;">journalctl -f</span></strong></p>
+<p>Фильтрация по времени:</p>
+<p><strong><span style="background-color: #ccffcc;">journalctl -- since "yesterday"</span></strong></p>
+<p><strong><span style="background-color: #ccffcc;">journalctl -- until "today"</span></strong></p>
+<p><strong><span style="background-color: #ccffcc;">journalctl -- since "2023-10-27 10:00:00"</span></strong></p>
+<p>&nbsp;</p>
+<h3>Отключение композиции рабочего стола:</h3>
+<p><strong><span style="background-color: #ccffcc;">gsettings set org.gnome.desktop.interface enable-animations false</span></strong></p>
+<p>&nbsp;</p>
+<h2>Катя стайл:</h2>
 <h3>Резервное копирование</h3>
-  <p>sudo dd if=/dev/sda of=~/system_image.img bs=4M status=progress - установочный образ системы</p>
 <p><a title="резервное копирование" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fstorage14.eljur.ru%2Fstorage%2Ff08e31809aa0ffefeb2f3b6dd3441acc%3Ffilename%3D19%2B%25D0%25A0%25D0%25B5%25D0%25B7%25D0%25B5%25D1%2580%25D0%25B2_%25D0%25BA%25D0%25BE%25D0%25BF%25D0%25B8_Ubuntu.docx%26domain%3Dkmpo&amp;wdOrigin=BROWSELINK">ссылка на резервное копирование</a></p>
 <p>если это не работает, то: sudo apt install deja-dup. Затем в меню найти эту программу, потыкать и сделать резервное копирование.</p>
+<p>&nbsp;</p>
+<p>sudo dd if=/dev/sda of=~/system_image.img bs=4M status=progress - установочный образ системы</p>
 <h3>Настройка SSH</h3>
 <p><a title="Настройка SSH" href="https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fstorage14.eljur.ru%2Fstorage%2Fd23e870a414f27ef2309a6055567df4a%3Ffilename%3D20%2BSSH%2BLinux.docx%26domain%3Dkmpo&amp;wdOrigin=BROWSELINK">ссылка на настройку SSH</a></p>
 <p>лучше делать по файлу выше!!</p>
